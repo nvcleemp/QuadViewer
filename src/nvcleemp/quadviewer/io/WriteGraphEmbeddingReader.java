@@ -15,7 +15,7 @@ public class WriteGraphEmbeddingReader {
         //do not instantiate
     }
     
-    public static double[][] writeQuadrangulation(Quadrangulation q, Reader r) throws IOException{
+    public static double[][] readEmbedding(Quadrangulation q, Reader r) throws IOException{
         BufferedReader br = new BufferedReader(r);
         String lastRead = br.readLine();
         if(">>writegraph2d<<".equals(lastRead)) lastRead = br.readLine(); //skip header
