@@ -11,6 +11,8 @@ public class Quadrangulation {
     private Edge firstEdge[];
     
     private int degrees[];
+    
+    private Embedding embedding;
 
     public Quadrangulation(int order) {
         this.order = order;
@@ -38,4 +40,16 @@ public class Quadrangulation {
         return order;
     }
     
+    public void setEmbedding(Embedding embedding){
+        this.embedding = embedding;
+    }
+    
+    public Embedding getEmbedding(){
+        return embedding;
+    }
+    
+    public Embedding createEmbedding(){
+        setEmbedding(new Embedding(order));
+        return getEmbedding();
+    }
 }
