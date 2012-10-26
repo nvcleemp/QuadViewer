@@ -86,7 +86,7 @@ public class AngleAssignmentCodeReader {
             pos++; //last zero
         }
         
-        return null;
+        return q;
     }
     
     private enum Endian {
