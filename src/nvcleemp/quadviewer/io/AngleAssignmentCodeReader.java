@@ -134,12 +134,12 @@ public class AngleAssignmentCodeReader {
         }
         
         if(read=='>'){
-            //possibly dealing with a header
+            //possibly dealing with a header >>angle_assignment<<
             buffer[0] = read;
             buffer[1] = is.read();
             buffer[2] = is.read();
             bufferUsed = true;
-            if(buffer[1]=='>' && buffer[2]=='p'){
+            if(buffer[1]=='>' && buffer[2]=='a'){
                 //this is a header
                 while(read!='<' && read!=-1) read = is.read();
                 if(read==-1){
