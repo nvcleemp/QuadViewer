@@ -69,6 +69,7 @@ public class AngleAssignmentCodeReader {
             }
             q.getFirstEdge(vertex).setPrevious(e);
             e.setNext(q.getFirstEdge(vertex));
+            q.setDegree(vertex, degree);
             
             //read angles
             pos++;
